@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/home', function(){
     return "Ini homepage";
 });
+
+Route::get('/pzn', function () {
+    return 'Hello Programmer Zaman Now';
+});
