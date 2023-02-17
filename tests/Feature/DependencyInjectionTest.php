@@ -2,19 +2,18 @@
 
 namespace Tests\Feature;
 
+use App\Data\Bar;
+use App\Data\Foo;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class DependencyInjectionTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
-    public function test_example(): void
-    {
-        $response = $this->get('/');
+    public function testDepInj(){
+        $foo= new Foo();
+        $bar= new Bar($foo);
 
-        $response->assertStatus(200);
+        self::assertEquals('Foo and Bar',$bar->bar());
     }
 }
