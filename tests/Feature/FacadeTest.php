@@ -16,6 +16,5 @@ class FacadeTest extends TestCase
 
         self::assertEquals($firstName1,$firstName2);
 
-        var_dump(Config::all());
     }
 }
