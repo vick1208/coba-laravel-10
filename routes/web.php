@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'home');
 
 Route::get('/home', function(){
     return "Ini homepage";
@@ -23,4 +21,8 @@ Route::get('/home', function(){
 
 Route::get('/pzn', function () {
     return 'Hello Programmer Zaman Now';
+});
+
+Route::get('/welcome',function () {
+    return view('welcome');
 });
