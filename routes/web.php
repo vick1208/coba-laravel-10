@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,5 @@ Route::get('/pzn', function () {
 Route::get('/welcome',function () {
     return view('welcome');
 });
+
+Route::get('/hello',[HelloController::class,"hello"]);
