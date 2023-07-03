@@ -11,7 +11,8 @@ use function PHPUnit\Framework\assertTrue;
 
 class LoggingTest extends TestCase
 {
-    public function testLogging(){
+    public function testLogging()
+    {
         Log::info("This is Info");
         Log::warning("This is Warning");
         Log::error("This is Error");
@@ -38,5 +39,15 @@ class LoggingTest extends TestCase
         Log::info("Hello Info");
 
         assertTrue(true);
+    }
+    public function testFileHandler()
+    {
+        $fileLogger = Log::channel("file");
+        $fileLogger->info("Hello File Handler");
+        $fileLogger->warning("Hello File Handler");
+        $fileLogger->error("Hello File Handler");
+        $fileLogger->critical("Hello File Handler");
+
+        self::assertTrue(true);
     }
 }
