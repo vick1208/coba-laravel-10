@@ -7,6 +7,8 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\App;
 use Tests\TestCase;
 
+use function PHPUnit\Framework\assertTrue;
+
 class AppEnviromentTest extends TestCase
 {
     public function testAppEnv()
@@ -14,7 +16,7 @@ class AppEnviromentTest extends TestCase
 
         if(App::environment(['testing', 'prod', 'dev'])){
             // kode program kita
-            self::assertTrue(true);
+            assertTrue(true);
         }
     }
 }
