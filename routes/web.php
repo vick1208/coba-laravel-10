@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'home');
+Route::view('/', 'welcome');
 
 Route::get('/home', function(){
     return "Ini homepage";
